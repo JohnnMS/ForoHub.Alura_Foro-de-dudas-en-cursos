@@ -75,7 +75,7 @@ http://localhost:server-port/temas?pagina=0&tamano=10&orden=fechaCreacion.
         &emsp;&emsp;}<br>
 }<br>
 
-### ✳️ Mostrar un tema específico <br>
+## ✳️ Mostrar un tema específico <br>
 ### ​GET /temas/{id}
 http://localhost:server-port/temas/id<br>
 Content-Type: application/json
@@ -113,7 +113,7 @@ Content-Type: application/json
     &emsp;&emsp;}<br>
 }<br>
 
-### ✳️ Actualizar un tema <br>
+## ✳️ Actualizar un tema <br>
 ### ​PUT /temas/{id}
 http://localhost:server-port/temas/id<br>
 Content-Type: application/json
@@ -126,7 +126,7 @@ De acuerdo con las reglas de negocio, no se puede duplicar títulos y mensajes
     &emsp;&emsp;"curso": "Nombre del curso"<br>
 }<br>
 
-### ✳️ Eliminar un tema <br>
+## ✳️ Eliminar un tema <br>
 ### ​DELETE /temas/{id}
 http://localhost:server-port/temas/id
 <br>
@@ -136,7 +136,7 @@ http://localhost:server-port/temas/id
 
 Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-### Licencias de Dependencias
+## Licencias de Dependencias
 
 Este proyecto utiliza las siguientes bibliotecas y frameworks, cada uno con sus respectivas licencias:
 - **JDK de Java 17**: Disponible bajo la [Licencia Pública General de GNU, versión 2, con la excepción de la clase de biblioteca](https://openjdk.java.net/legal/gplv2+ce.html).
@@ -146,9 +146,9 @@ Este proyecto utiliza las siguientes bibliotecas y frameworks, cada uno con sus 
 - **Spring Security**: Licenciado bajo la [Licencia Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 - **MySQL**: Licenciado bajo la [GNU General Public License v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 
-### Demo
+## Demo
 
 [https://youtu.be/BMAsHdx2myw](https://youtu.be/NXfdXpZHLvo)
 
-### Autor
+## Autor
 Johnn Montañez Sarmiento
