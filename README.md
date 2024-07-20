@@ -29,11 +29,11 @@ proceso de formación en Alura & Oracle Next Education. Con su desarrollo se bus
 
 ### Configuración
 ⚙️ Crear variables de entorno Name/Value:
-- API_Secret/"Tu clave particular para crear el token JWT".
-- DB_HOST_FORO/localhost:3306.
-- DB_NAME_FORO/"Nombre para base de datos".
-- DB_USER_FORO/"User creado para tu base de datos, por defecto para MySQL es 'root' ".
-- DB_PSW_FORO/"Tu clave de acceso a la base de datos".
+- API_Secret/"Tu clave".     *Clave para la firma de los los web token JWT*
+- DB_HOST_FORO/localhost:3306
+- DB_NAME_FORO/"Nombre para base de datos"
+- DB_USER_FORO/"tu usuario de acceso a la base de datos".      *Por defecto para MySQL el usuario es 'root'*
+- DB_PSW_FORO/"Tu clave de acceso a la base de datos"
 
 ⚙️ Ruta del proyecto
 - ...\src\main\java\com\monsa\ForoHubAlura\ForoHubAluraApplication.java
@@ -44,92 +44,53 @@ proceso de formación en Alura & Oracle Next Education. Con su desarrollo se bus
 ## USO DE LA API.
 Aquí tienes algunos ejemplos de cómo interactuar con la API:<br>
 
+## ✳️ Autenticación
+### ​POST /login
+Content-Type: application/json <br>
+Auth type: Bearer Token
+
+![image](https://github.com/user-attachments/assets/d31548b6-e1bb-4e78-a619-efc5c51ffb5e)
+
+
+Nota: Ver datos de usuarios en la base de datos. Las claves se encuentran codificadas con *Bcrypt password hashes*. Administrador clave: 123456, otros usuarios: clave123 
+
 ## ✳️ Crear un nuevo tema
 ### ​POST /temas
-http://localhost:server-port/temas<br>
 Content-Type: application/json
 
-{<br>
-    &emsp;&emsp;"id_usuario": "Número entero sin comillas",<br> 
-    &emsp;&emsp;"titulo": "Título del tema",<br>
-    &emsp;&emsp;"mensaje": "Mensaje del tema",<br>
-    &emsp;&emsp;"curso": "Nombre del curso"<br>
-}<br>
+![image](https://github.com/user-attachments/assets/6cc00394-f19d-4d9b-a0e4-7bb9915abed2)
+
+Nota: Ver nombres de los cursos en la base de datos
+
 
 ## ✳️ Mostrar todos los temas creados <br>
 ### ​GET /temas
-http://localhost:server-port/temas<br>
 Content-Type: application/json<br>
 Retorna datos paginados con todos los temas almacenados. La página se puede configurar por tamaño y número de página:<br> 
-http://localhost:server-port/temas?pagina=0&tamano=10&orden=fechaCreacion.
 
-{<br>
-    &emsp;&emsp;"id": "Número entero sin comillas",<br>
-    &emsp;&emsp;"titulo": "Titulo del tema",<br>
-    &emsp;&emsp;"mensaje": "Mensaje del tema",<br>
-    &emsp;&emsp;"fechaCreacion": "Fecha y hora",<br>
-       &emsp;&emsp;"curso": {<br>
-            &emsp;&emsp;&emsp;"id_curso": "Número entero sin comillas",<br>
-            &emsp;&emsp;&emsp;"Curso": "Nombre del curso tipo ENUM",<br>
-            &emsp;&emsp;&emsp;"categoria": "Asignatura tipo ENUM"<br>
-        &emsp;&emsp;}<br>
-}<br>
+![image](https://github.com/user-attachments/assets/993db71b-8760-4c8e-88cf-4bd6e540feca)
+
 
 ## ✳️ Mostrar un tema específico <br>
 ### ​GET /temas/{id}
-http://localhost:server-port/temas/id<br>
 Content-Type: application/json
 
-{<br>
-    &emsp;&emsp;"id_foro": "Número entero sin comillas",<br>
-    &emsp;&emsp;"titulo": "Titulo del tema",<br>
-    &emsp;&emsp;"mensaje": "Mensaje del tema",<br>
-    &emsp;&emsp;"fecha_de_creacion": "Fecha y hora",<br>
-    &emsp;&emsp;"activo": true/false,<br>
-    &emsp;&emsp;"usuario": {<br>
-        &emsp;&emsp;&emsp;&emsp;"id_usuario": "Número entero sin comillas",<br>
-        &emsp;&emsp;&emsp;&emsp;"nombre": "Nombre",<br>
-        &emsp;&emsp;&emsp;&emsp;"email": "email",<br>
-        &emsp;&emsp;&emsp;&emsp;"usuario": "usuario"<br>
-    &emsp;&emsp;},<br>
-    &emsp;&emsp;"curso": {<br>
-        &emsp;&emsp;&emsp;&emsp;"id_curso": "Número entero sin comillas",<br>
-        &emsp;&emsp;&emsp;&emsp;"Curso": "Nombre del curso tipo ENUM",<br>
-        &emsp;&emsp;&emsp;&emsp;"categoria": "Asignatura tipo ENUM"<br>
-    &emsp;&emsp;},<br>
-    &emsp;&emsp;"respuestas": {<br>
-        &emsp;&emsp;{<br>
-            &emsp;&emsp;&emsp;&emsp;"id_respuesta": "Número entero sin comillas",<br>
-            &emsp;&emsp;&emsp;&emsp;"mensaje": "Mensaje respuesta del tema",<br>
-            &emsp;&emsp;&emsp;&emsp;"fecha_de_creacion": "Fecha y hora",<br>
-            &emsp;&emsp;&emsp;&emsp;"solucion": "Nombre de la solución",<br>
-            &emsp;&emsp;&emsp;&emsp;"usuario": {<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"id_usuario": "Número entero sin comillas",<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"nombre": "Nombre de quien responde",<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"email": "email",<br>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"usuario": "Usuario quien responde"<br>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}<br>
-        &emsp;&emsp;&emsp;&emsp;}<br>
-    &emsp;&emsp;}<br>
-}<br>
+![image](https://github.com/user-attachments/assets/0b7bfe74-2b7d-4269-ba60-e5a53359dd24)
+
 
 ## ✳️ Actualizar un tema <br>
 ### ​PUT /temas/{id}
-http://localhost:server-port/temas/id<br>
-Content-Type: application/json
-De acuerdo con las reglas de negocio, no se puede duplicar títulos y mensajes
+Content-Type: application/json <br>
+De acuerdo con las reglas de negocio, no se puede duplicar ni títulos, ni mensajes para un mismo {id}
 
-{<br>
-    &emsp;&emsp;"id_usuario": "Número entero sin comillas",<br> 
-    &emsp;&emsp;"titulo": "Nuevo título del tema",<br>
-    &emsp;&emsp;"mensaje": "Nuevo mensaje del tema",<br>
-    &emsp;&emsp;"curso": "Nombre del curso"<br>
-}<br>
+![image](https://github.com/user-attachments/assets/4e0dd0bb-fa8b-482e-a321-617c105915ba)
+
 
 ## ✳️ Eliminar un tema <br>
 ### ​DELETE /temas/{id}
-http://localhost:server-port/temas/id
-<br>
+La API responde con los código de estado: 200 OK, 403 Forbidden o 404 Not Found, según el caso
+
+![image](https://github.com/user-attachments/assets/a86032df-25b8-49c6-9b85-fde15ba23f49)
 <br>
 
 ## Licencias
