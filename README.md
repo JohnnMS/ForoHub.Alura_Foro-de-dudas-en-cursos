@@ -1,4 +1,4 @@
-# CHALLENGE 4: ForoHub.Alura_Foro-de-dudas-en-cursos 🗂️​
+# CHALLENGE 4: ForoHub.Alura, Foro de dudas para cursos online 🗂️​
 Versión final -1.0- del cuarto challenge desarrollado en el proceso de formación con Alura LATAM & Oracle Next Education.
 
 ## DESCRIPCIÓN
