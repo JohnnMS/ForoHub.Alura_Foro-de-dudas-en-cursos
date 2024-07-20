@@ -28,12 +28,16 @@ proceso de formación en Alura & Oracle Next Education. Con su desarrollo se bus
 ![image](https://github.com/user-attachments/assets/cabd9748-8ba9-43e7-b16e-dbb1aaa2bc03)
 
 ### Configuración
-⚙️ Crear variables de entorno Name/Value:
-- API_Secret/"Tu clave".     *Clave para la firma de los los web token JWT*
-- DB_HOST_FORO/localhost:3306
-- DB_NAME_FORO/"Nombre para base de datos"
-- DB_USER_FORO/"tu usuario de acceso a la base de datos".      *Por defecto para MySQL el usuario es 'root'*
-- DB_PSW_FORO/"Tu clave de acceso a la base de datos"
+⚙️ Crear variables de entorno Name / Value:
+- API_Secret / "Tu clave".
+> [!NOTE]
+> Clave para la firma de los web token JWT.
+- DB_HOST_FORO / localhost:3306
+- DB_NAME_FORO / "Nombre para la base de datos"
+- DB_USER_FORO / "tu usuario de acceso a la base de datos".
+> [!NOTE]
+> Por defecto para MySQL el usuario es 'root'.
+- DB_PSW_FORO / "Tu clave de acceso a la base de datos"
 
 ⚙️ Ruta del proyecto
 - ...\src\main\java\com\monsa\ForoHubAlura\ForoHubAluraApplication.java
@@ -51,8 +55,8 @@ Auth type: Bearer Token
 
 ![image](https://github.com/user-attachments/assets/d31548b6-e1bb-4e78-a619-efc5c51ffb5e)
 
-
-Nota: Ver datos de usuarios en la base de datos. Las claves se encuentran codificadas con *Bcrypt password hashes*. Administrador clave: 123456, otros usuarios: clave123 
+> [!NOTE]
+>  Ver datos de usuarios en la base de datos. Las claves se encuentran codificadas con *Bcrypt password hashes*. Administrador clave: 123456, otros usuarios: clave123 
 
 ## ✳️ Crear un nuevo tema
 ### ​POST /temas
@@ -60,7 +64,8 @@ Content-Type: application/json
 
 ![image](https://github.com/user-attachments/assets/6cc00394-f19d-4d9b-a0e4-7bb9915abed2)
 
-Nota: Ver nombres de los cursos en la base de datos
+> [!NOTE]
+> Ver nombres de los cursos en la base de datos.
 
 
 ## ✳️ Mostrar todos los temas creados <br>
