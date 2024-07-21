@@ -1,8 +1,13 @@
 # CHALLENGE 4: ForoHub.Alura, foro de dudas para cursos online 🗂️​
-Versión final -1.0- del cuarto challenge desarrollado en el proceso de formación con Alura LATAM & Oracle Next Education.
+Cuarto challenge desarrollado en el proceso de formación con Alura LATAM & Oracle Next Education.<br>
+
+![Static Badge](https://img.shields.io/badge/Build-Passing-brightgreen?logo=oracle&logoColor=white&logoSize=auto&labelColor=grey)
+![Static Badge](https://img.shields.io/badge/Language-Java-%23D21404?logoColor=white&logoSize=auto&labelColor=grey)
+![Static Badge](https://img.shields.io/badge/Latest-v1.0.0-blue?logoColor=white&logoSize=auto&labelColor=grey)
+![Static Badge](https://img.shields.io/badge/License-MIT-%23ED7117?logoColor=white&logoSize=auto&labelColor=grey)
 
 ## DESCRIPCIÓN
-ForoHub, se desarrolló en el lenguaje de programación Java 17 como base, usando distintas dependencias como Maven, Spring Boot,
+"ForoHub.Alura", se desarrolló en el lenguaje de programación Java 17 como base, usando distintas dependencias como Maven, Spring Boot,
 Spring Data, Spring WEB, Spring Security y MySQL. Esta API simula el funcionamiento de un foro de preguntas y respuestas, como 
 el utilizado en Alura Latam, donde estudiantes, profesores y moderadores pueden colaborar y aprender juntos. Nuestro objetivo 
 es replicar el proceso de gestión de un foro a nivel de backend, abordando cómo se almacena la información, cómo se relacionan
