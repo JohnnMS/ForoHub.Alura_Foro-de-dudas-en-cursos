@@ -5,6 +5,7 @@ Cuarto challenge desarrollado en el proceso de formación con Alura LATAM & Orac
 ![Static Badge](https://img.shields.io/badge/Language-Java-%23D21404?logoColor=white&logoSize=auto&labelColor=grey)
 ![Static Badge](https://img.shields.io/badge/Latest-v1.0.0-blue?logoColor=white&logoSize=auto&labelColor=grey)
 ![Static Badge](https://img.shields.io/badge/License-MIT-%23ED7117?logoColor=white&logoSize=auto&labelColor=grey)
+![Static Badge](https://img.shields.io/badge/MySQL-%23003791?logo=mysql&logoColor=white)
 
 ## DESCRIPCIÓN
 "ForoHub.Alura", se desarrolló en el lenguaje de programación Java 17 como base, usando distintas dependencias como Maven, Spring Boot,
